@@ -102,3 +102,11 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+_build/
+.vscode/
+.cache/
+.pytest_cache/
+secret/
+
+.DS_Store
