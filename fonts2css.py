@@ -28,10 +28,14 @@ def make_sure_path_exists(dest_path):
 
 
 def main():
-    if len(sys.argv) > 2:
+    if len(sys.argv) > 1:
 
         font_name = sys.argv[1]
-        folder_path = sys.argv[2]
+
+        if len(sys.argv) > 2:
+            folder_path = sys.argv[2]
+        else:
+            folder_path = '.'
 
         font_name_lower = font_name.lower()
         css_filename = font_name + '.css'
@@ -92,7 +96,7 @@ The file {} has been created!
         print('''
 Usage:
 
-   fonts2css <Font Name> <path to folder with font file(s)>
+   fonts2css <Font Name> [<path to folder with font file(s)>]
 ''')
         exit(1)
 
